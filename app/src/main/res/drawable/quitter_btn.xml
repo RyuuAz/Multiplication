@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!-- Image à afficher au-dessus du fond -->
+	<item
+		android:drawable="@drawable/quitter"
+		android:gravity="center" /> <!-- Centrer l'image dans le rectangle -->
+
+</layer-list>
