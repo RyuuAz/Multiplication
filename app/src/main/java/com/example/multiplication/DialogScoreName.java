@@ -1,18 +1,22 @@
 package com.example.multiplication;
-import android.app.AlertDialog;
+
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-import android.content.Intent;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DialogScoreName extends AppCompatActivity {
-	private String ratio;
+
+	private int score;
+	private int nbOperation;
+
+	private String difficulty;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,9 @@ public class DialogScoreName extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 
 		Intent intent = getIntent();
-		this.ratio = intent.getStringExtra("score");
+		this.score = intent.getIntExtra("score", 0);
+		this.nbOperation = intent.getIntExtra("nbOperation", 0);
+		this.difficulty = intent.getStringExtra("diff");
 
 		// Appelez showCustomInputDialog lorsque vous le souhaitez, par exemple dans onCreate
 		showCustomInputDialog(DialogScoreName.this);
@@ -49,18 +55,19 @@ public class DialogScoreName extends AppCompatActivity {
 				// Récupérer le nom du joueur entré par l'utilisateur
 				String playerName = etPlayerName.getText().toString();
 
-				// Faire quelque chose avec le nom du joueur (par exemple, l'afficher)
-				Toast.makeText(DialogScoreName.this, "Nom du joueur : " + playerName, Toast.LENGTH_SHORT).show();
-				FileWriter.writeToFile("highscore.txt",playerName + "\t" + ratio );
-				finish();  // Terminer l'activité ici
+				// Ajouter le score avec le nom du joueur, le score et le nombre de tentatives
+				HighScoreManager.addScore(context, playerName, score, nbOperation, difficulty);
+
+				// Terminer l'activité ici
+				finish();
 			}
 		});
 
 		btnCancel.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				// Annuler le dialogue
-				finish();  // Terminer l'activité ici
+				// Annuler le dialogue et terminer l'activité
+				finish();
 			}
 		});
 

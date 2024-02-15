@@ -20,6 +20,12 @@
 
 	</TextView>
 
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="250dp"
+		app:srcCompat="@mipmap/ic_banner"
+		android:layout_marginBottom="50sp"/>
+
 	<Button
 		android:id="@+id/easyBtn"
 		android:layout_width="match_parent"
@@ -32,7 +38,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="80dp"
 		android:background="@drawable/rectangle_btn"
-		android:text="@string/highscore" />
+		android:text="@string/highscore"
+		android:onClick="tabScore"/>
 
 	<Button
 		android:layout_width="match_parent"

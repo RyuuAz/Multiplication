@@ -8,10 +8,14 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
+
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
+
 	}
+
 
 	public void changeToMain(View view){
 		// Obtenez le bouton cliqué
@@ -23,10 +27,6 @@ public class HomeActivity extends AppCompatActivity {
 		Intent intent = new Intent(HomeActivity.this, LobbyActivity.class);
 		intent.putExtra("diff", difficulty);
 		startActivity(intent);
-	}
-
-	public void close(View view){
-		finish();
 	}
 
 }

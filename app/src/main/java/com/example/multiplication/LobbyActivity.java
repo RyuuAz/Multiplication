@@ -26,4 +26,11 @@ public class LobbyActivity extends AppCompatActivity {
 		intent.putExtra("diff", difficulty);
 		startActivity(intent);
 	}
+
+	public void tabScore(View view) {
+
+		Intent intent = new Intent(LobbyActivity.this, HighScoreActivity.class);
+		intent.putExtra("diff", difficulty);
+		startActivity(intent);
+	}
 }

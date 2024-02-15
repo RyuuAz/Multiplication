@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
 	public void start(){
 		TextView timer = (TextView) findViewById(R.id.timer);
-		new CountDownTimer(60000, 1000) { // 60 secondes, avec une mise à jour chaque seconde (1000 millisecondes)
+		new CountDownTimer(3000, 1000) { // 60 secondes, avec une mise à jour chaque seconde (1000 millisecondes)
 			public void onTick(long millisUntilFinished) {
 				// Ce code est exécuté à chaque seconde pendant le compte à rebours
 				String secondesRestantes = String.valueOf(millisUntilFinished / 1000);
@@ -154,7 +154,9 @@ public class MainActivity extends AppCompatActivity {
 				// Ce code est exécuté lorsque le compte à rebours est terminé
 				timer.setText("Fini");
 				Intent intent = new Intent(MainActivity.this, DialogScoreName.class);
-				intent.putExtra("score", ratio);
+				intent.putExtra("score", score);
+				intent.putExtra("nbOperation", nbOperation);
+				intent.putExtra("diff", difficulty);
 				startActivity(intent);
 				finish();
 
@@ -217,6 +219,5 @@ public class MainActivity extends AppCompatActivity {
 		myToast.show();
 	}
 	*/
-
 
 }

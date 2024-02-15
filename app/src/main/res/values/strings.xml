@@ -11,7 +11,7 @@
     <string name="reset"> Reset </string>
     <string name="close"> X </string>
     <string name="timer"> 00:00 </string>
-    <string name="score"> 00/00 </string>
+    <string name="score">  </string>
 
 
     <!-- HomeActivity -->
@@ -19,6 +19,7 @@
     <string name="easy"> Facile </string>
     <string name="mid"> Moyen </string>
     <string name="hard"> Difficile </string>
+    <string name="tp"> Les autres TP </string>
     <string name="quitter"> Quitter </string>
     <string name="gamename"> MultiQuiz </string>
 
@@ -31,5 +32,11 @@
     <string name="name"> Nom du joueur </string>
     <string name="annuler">Annuler</string>
     <string name="ok">OK</string>
+
+    <!-- HighscoreActivity -->
+    <string name="diff"> </string>
+
+
+
 
 </resources>
