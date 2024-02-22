@@ -37,6 +37,10 @@
     <string name="diff"> </string>
 
 
-
+    <!-- AutreActivity -->
+    <string name="autre"> Autre </string>
+    <string name="dessinTp"> Le Dessin </string>
+    <string name="tpDessinIntent">TP Dessin Intent</string>
+    <string name="tpDessinCapteur">TP Dessin Capteur</string>
 
 </resources>

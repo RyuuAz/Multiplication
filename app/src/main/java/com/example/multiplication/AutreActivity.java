@@ -7,35 +7,35 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class HomeActivity extends AppCompatActivity {
+public class AutreActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home);
+		setContentView(R.layout.activity_autre);
 
 	}
 
-	public void changeToMain(View view){
+
+	public void changeToDessin(View view){
 		// Obtenez le bouton cliqué
 		Button boutonClique = (Button) view;
 
 		// Obtenez le texte du bouton
 		String difficulty = boutonClique.getText().toString();
 
-		Intent intent = new Intent(HomeActivity.this, LobbyActivity.class);
-		intent.putExtra("diff", difficulty);
+		Intent intent = new Intent(AutreActivity.this, DessinActivity.class);
 		startActivity(intent);
 	}
 
-	public void autres(View view){
+	public void changeToTPDessinIntent(View view){
 		// Obtenez le bouton cliqué
 		Button boutonClique = (Button) view;
 
 		// Obtenez le texte du bouton
 		String difficulty = boutonClique.getText().toString();
 
-		Intent intent = new Intent(HomeActivity.this, AutreActivity.class);
+		Intent intent = new Intent(AutreActivity.this, TPDessinIntentActivity.class);
 		startActivity(intent);
 	}
 

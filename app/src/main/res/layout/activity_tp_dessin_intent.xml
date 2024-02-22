@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_centerInParent="true">
+
+	<!-- Zone 1: Saisie d'URL et bouton pour lancer le navigateur -->
+	<EditText
+		android:id="@+id/editTextUrl"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:hint="Saisir une URL"/>
+
+	<Button
+		android:id="@+id/buttonOpenBrowser"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/editTextUrl"
+		android:layout_centerHorizontal="true"
+		android:text="Ouvrir dans le navigateur"/>
+
+	<!-- Zone 2: Saisie de texte, motif et bouton pour compter les occurrences -->
+	<EditText
+		android:id="@+id/editTextText"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/buttonOpenBrowser"
+		android:layout_centerHorizontal="true"
+		android:hint="Saisir du texte"/>
+
+	<EditText
+		android:id="@+id/editTextPattern"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/editTextText"
+		android:layout_centerHorizontal="true"
+		android:hint="Saisir un motif"/>
+
+	<Button
+		android:id="@+id/buttonCountOccurrences"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/editTextPattern"
+		android:layout_centerHorizontal="true"
+		android:text="Compter les occurrences"/>
+
+	<TextView
+		android:id="@+id/textViewOccurrences"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/buttonCountOccurrences"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="8dp"
+		android:background="#00FF00"
+		android:text="Occurrences: 0"/>
+
+	<!-- Zone 3: Bouton pour lancer une Activity de dessin -->
+	<Button
+		android:id="@+id/buttonOpenDrawingActivity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/textViewOccurrences"
+		android:layout_centerHorizontal="true"
+		android:text="Lancer l'Activity de dessin"/>
+
+	<!-- Zone 4: Bouton Quitter -->
+	<Button
+		android:id="@+id/buttonExit"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/buttonOpenDrawingActivity"
+		android:layout_centerHorizontal="true"
+		android:text="Quitter"/>
+
+</RelativeLayout>
