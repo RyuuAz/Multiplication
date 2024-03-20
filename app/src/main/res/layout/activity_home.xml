@@ -15,8 +15,7 @@
 		android:textSize="30sp"
 		android:text="@string/gamename"
 		android:textColor="@color/white"
-		android:gravity="center"
-		android:fontFamily="sans-serif-black">
+		android:gravity="center">
 
 	</TextView>
 

@@ -42,5 +42,6 @@
     <string name="dessinTp"> Le Dessin </string>
     <string name="tpDessinIntent">TP Dessin Intent</string>
     <string name="tpDessinCapteur">TP Dessin Capteur</string>
+    <string name="projetFinal">Projet Final</string>
 
 </resources>

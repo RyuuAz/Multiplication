@@ -5,11 +5,13 @@
 	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 		<!-- ... autres définitions ... -->
 		<item name="buttonStyle">@style/VioletButton</item>
+		<item name="android:fontFamily">@font/dogica</item>
 	</style>
 
 	<style name="VioletButton" parent="Widget.AppCompat.Button">
 		<item name="android:backgroundTint">#E96124A6</item>
 		<item name="android:textColor">@color/white</item>
+
 		<!-- Ajoutez d'autres attributs personnalisés si nécessaire -->
 	</style>
 
